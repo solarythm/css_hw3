@@ -7,11 +7,82 @@
     <title>Document</title>
     
     <style>
-    .body{
-        margin: auto;
+    * {
+        font-family: Arial, Helvetica, sans-serif;
     }
+
+    body {
+        background-color: rgb(211,211,211,0.5);
+        margin: auto;
+               
+    }
+
+    .imagebox{
+        width: 10%;
+    }
+
+    input[type=text], select {
+        width: 95%;
+        padding: 10px 5px;
+        margin: 20px auto 5px ;
+        display: block;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+
+    input[type=password], select {
+        width: 95%;
+        padding: 10px 5px;
+        margin: 0 auto ;
+        display: block;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+
+    input[type=submit], select {
+        width: 95%;
+        padding: 10px 5px;
+        margin: 0 auto ;
+        display: block;
+        background-color:rgba(30,144,255,0.8);
+        color: white;
+        font-size: 1.2em;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+
+
+    input[type=newAccount], select {
+        width: 95%;
+        padding: 10px 5px;
+        margin: 10 auto ;
+        display: block;
+        background-color:rgba(22, 187, 52, 0.8);
+        color: white;
+        font-size: 1.2em;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
     
+    .inputBox{
+        border: solid grey 1px;
+        border-radius: 10px;
+        box-shadow: 2px 3px 3px 2px grey;
+        width: 400px;
+        height: 300px;
+        display: block;
+        text-align: center;
+        
+    }
+
     .languageOption {
+        margin: 50px auto;
         display: flex;
         justify-content: space-around;
     }
@@ -42,7 +113,30 @@
 
 
 </head>
+
+
 <body>
+    <div>
+
+        <div > <img class = "imagebox" src="./Facebook_logo_2015.jpeg" alt = "logo">  </div>
+        <div> <h3>Facebook helps you connect and share with the people in your life. </h3> </div>
+        <div class = "inputBox">    
+            <form action = "/action_page.php">
+                <label for = "username"></label> <input type= "text" id = "username" name = "user" placeholder="Email address or phone number"> <br>
+                <label for = "password"></label> <input type= "password" id = "username" name = "password" placeholder="Password"> <br>
+                <input type= "submit" value = "Submit"> <br>
+                <a href = "https://www.facebook.com"> Forgotten Password?</a> <br> <br>
+                <input type= "newAccount" value = "Create New Account"> 
+            </form>
+            <br>
+            <p>Create a Page for a celebrity, band or business.</p>>  
+        </div> 
+        
+        
+    </div>
+
+
+
     <div class = "languageOption"> 
         <div>
             <div>English (UK)</div>
