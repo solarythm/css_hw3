@@ -17,8 +17,49 @@
                
     }
 
+    .content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap:nowrap;
+        justify-content: center;
+        align-items: left;
+    }
+    
+    @media (max-width: 800px){
+        .content{
+            flex-direction: column;
+        }
+        .imageboxContainer > div{
+            text-align: center;
+            font-size:  0.6em;
+            margin-top: 10px;
+        }
+        .inputboxContainer{
+
+            margin-top: -50px;
+            
+        }
+        
+        .inputBox{
+            margin-top: -50px;
+        }
+       
+    }
+
+
+    .imageboxContainer{
+        margin: 30px auto 0px auto;
+        width: 400px;
+        padding: 0px 15px;
+        text-align: left;
+    }
+    
+
     .imagebox{
-        width: 10%;
+        border-radius: 13px;
+        width: 300px;
+        height: auto;
+
     }
 
     input[type=text], select {
@@ -41,12 +82,12 @@
         box-sizing: border-box;
     }
 
-    input[type=submit], select {
+    input[type=submit] {
         width: 95%;
         padding: 10px 5px;
         margin: 0 auto ;
         display: block;
-        background-color:rgba(30,144,255,0.8);
+        background-color:rgba(32,144,255,0.8);
         color: white;
         font-size: 1.2em;
         border: 1px solid #ccc;
@@ -55,7 +96,7 @@
     }
 
 
-    input[type=newAccount], select {
+    input[type=newAccount] {
         width: 95%;
         padding: 10px 5px;
         margin: 10 auto ;
@@ -66,7 +107,7 @@
         border: 1px solid #ccc;
         border-radius: 8px;
         box-sizing: border-box;
-        text-align: center;
+        
     }
 
     
@@ -74,6 +115,7 @@
         border: solid grey 1px;
         border-radius: 10px;
         box-shadow: 2px 3px 3px 2px grey;
+        margin: 10px auto;
         width: 400px;
         height: 300px;
         display: block;
@@ -81,8 +123,12 @@
         
     }
 
+    .inputboxContainer{
+        margin: 10px auto;
+    }
+
     .languageOption {
-        margin: 50px auto;
+        margin: 35px auto;
         display: flex;
         justify-content: space-around;
     }
@@ -94,20 +140,20 @@
         flex-basis: 180px;
         flex-direction: column;
         text-align: center;
+        line-height:  2em;
+        
+        
     }
     .pageFooter {
-        margin: auto;
-        margin-top: 2vh;
-      
-    }
-    .pageFooter > div {
+        margin: 0px auto;
         background-color: whitesmoke;
         border: solid 1px gray ;
         border-radius: 8px;
-        padding: 0.8vh;
-        
+        padding: 1.5vh;
+        width: 75%;     
         text-align: center;
     }
+
     </style>
 
 
@@ -116,23 +162,26 @@
 
 
 <body>
-    <div>
+    <div class = "content">
+        <div class = "imageboxContainer">
 
-        <div > <img class = "imagebox" src="./Facebook_logo_2015.jpeg" alt = "logo">  </div>
-        <div> <h3>Facebook helps you connect and share with the people in your life. </h3> </div>
-        <div class = "inputBox">    
-            <form action = "/action_page.php">
-                <label for = "username"></label> <input type= "text" id = "username" name = "user" placeholder="Email address or phone number"> <br>
-                <label for = "password"></label> <input type= "password" id = "username" name = "password" placeholder="Password"> <br>
-                <input type= "submit" value = "Submit"> <br>
-                <a href = "https://www.facebook.com"> Forgotten Password?</a> <br> <br>
-                <input type= "newAccount" value = "Create New Account"> 
-            </form>
-            <br>
-            <p>Create a Page for a celebrity, band or business.</p>>  
-        </div> 
-        
-        
+            <div > <img class = "imagebox" src="./Facebook_logo_2015.jpeg" alt = "logo">  </div>
+            <div> <h3>Facebook helps you connect and share with the people in your life. </h3> </div>
+        </div>
+
+        <div class = "inputboxContainer">
+            <div class = "inputBox">    
+                <form action = "/action_page.php">
+                    <label for = "username"></label> <input type= "text" id = "username" name = "user" placeholder="Email address or phone number"> <br>
+                    <label for = "password"></label> <input type= "password" id = "username" name = "password" placeholder="Password"> <br>
+                    <input type= "submit" value = "Submit"> <br>
+                    <a href = "https://www.facebook.com"> Forgotten Password?</a> <br> <br>
+                    <input  type= "submit" style ="background-color:rgba(22, 187, 52, 0.8)" value = "Create New Account"> 
+                </form>
+                <br>
+                <p>Create a Page for a celebrity, band or business.</p>
+            </div>     
+        </div>
     </div>
 
 
@@ -155,7 +204,7 @@
     </div>
 
     <div class = "pageFooter">
-        <div> <em>About · Help · More</em> <br>  <i>Facebook Inc. </i></div>     
+        <em>About · Help · More</em> <br>  '<i>Facebook Inc. </i>    
     </div>
 </body>
 </html>
